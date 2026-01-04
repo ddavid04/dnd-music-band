@@ -73,16 +73,17 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {bandMembers.map((member, index) => (
-              <MemberCard
-                key={member.name}
-                name={member.name}
-                instrument={member.instrument}
-                bio={member.bio}
-                funFact={member.funFact}
-                index={index}
-              />
+              <div key={member.name} className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-sm">
+                <MemberCard
+                  name={member.name}
+                  instrument={member.instrument}
+                  bio={member.bio}
+                  funFact={member.funFact}
+                  index={index}
+                />
+              </div>
             ))}
           </div>
         </div>
