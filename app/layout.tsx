@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import UnderConstruction from "@/components/UnderConstruction";
 export const metadata: Metadata = {
   title: "DND Music Band - Rock Your World",
   description: "Welcome to DND Music Band - A vibrant rock band bringing energy and passion to every performance",
@@ -13,8 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <UnderConstruction>{children}</UnderConstruction>
+        {/* {children} */}
+      </body>
     </html>
   );
 }
-
